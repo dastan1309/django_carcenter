@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car center form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <h3>You are going to purchase {{ cars.name }}!</h3>
+    <img src="{{ cars.image }}" style="width: 400px">
+    <form method="post" style="width: 600px; padding: 20px; margin-left: 20px">
+        {% csrf_token %}
+  <div class="mb-3 form-check">
+    <label for="name" class="form-label">Введите имя:</label>
+    <input class="form-control" id="name" name = "name" required >
+  </div>
+  <div class="mb-3 form-check">
+    <label for="phone" class="form-label">Введите телефон</label>
+    <input class="form-control" id="phone" name="phone" required>
+  </div>
+  <div class="mb-3 form-check">
+    <label for="email" class="form-label"> Введите почту</label>
+    <input class="form-control" id="email" name="email" required>
+  </div>
+  <button style="padding: 10px;margin-left: 20px; width: 100px" type="submit" class="btn btn-primary">Submit</button>
+</form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
